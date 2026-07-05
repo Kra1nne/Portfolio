@@ -2,6 +2,40 @@ import React, { useState, useEffect, useRef } from 'react'
 import ThemeToggle from '../src/components/theme/toggle'
 import Resume from '../src/assets/docs/Ryan_Cabarrubias-Resume.pdf'
 
+// ---------- Certificate images ----------
+import certProgrammingV2 from '../src/assets/certificate/Programming_v2.jpg'
+import certEvco from '../src/assets/certificate/EVCO.jpg'
+import certProgrammingV1 from '../src/assets/certificate/Programming_v1.jpg'
+import certEvcoRecognition from '../src/assets/certificate/Evco_Recognation.jpg'
+import certCodeChum from '../src/assets/certificate/CodeChum.png'
+import certHack4GovV2 from '../src/assets/certificate/Hack4Gov_v2.jpg'
+import certHack4GovV1 from '../src/assets/certificate/Hack4Gov_v1.jpg'
+import certStartUp from '../src/assets/certificate/StartUp.jpg'
+
+// ---------- Project images: SoilSnap ----------
+import soilSnap0 from '../src/assets/project/SS_v0.png'
+import soilSnap1 from '../src/assets/project/SS_v1.png'
+import soilSnap2 from '../src/assets/project/SS_v2.png'
+
+// ---------- Project images: Municipal Assessor ----------
+import assessor0 from '../src/assets/project/MS_v0.png'
+import assessor1 from '../src/assets/project/MS_v1.png'
+import assessor2 from '../src/assets/project/MS_v2.png'
+
+// ---------- Project images: Resort / Reservation ----------
+import resort0 from '../src/assets/project/BO_v0.png'
+import resort1 from '../src/assets/project/BO_v1.png'
+import resort2 from '../src/assets/project/BO_v2.png'
+import resort3 from '../src/assets/project/BO_v3.png'
+import resort4 from '../src/assets/project/BO_v4.png'
+
+// ---------- Project images: HRIS ----------
+import hris0 from '../src/assets/project/HR_v0.png'
+import hris1 from '../src/assets/project/HR_v1.png'
+import hris2 from '../src/assets/project/HR_v2.png'
+import hris3 from '../src/assets/project/HR_v3.png'
+import hris4 from '../src/assets/project/HR_v4.png'
+
 const navItems = [
   { label: 'about', id: 'about' },
   { label: 'work', id: 'work' },
@@ -10,6 +44,7 @@ const navItems = [
   { label: 'certificate', id: 'certificate' },
   { label: 'contact', id: 'contact' },
 ]
+
 const experience = [
   {
     role: 'Freelance Full Stack Web Developer',
@@ -59,7 +94,7 @@ const certificates = [
     issuer: 'Southern Leyte State University, CCSIT',
     date: '2025',
     ext: '.cert',
-    image: '/src/assets/certificate/Programming_v2.jpg',
+    image: certProgrammingV2,
   },
   {
     type: 'certificate',
@@ -67,7 +102,7 @@ const certificates = [
     issuer: 'Philippine Society of Information Technology Education, Region VIII',
     date: '2024',
     ext: '.cert',
-    image: '/src/assets/certificate/EVCO.jpg',
+    image: certEvco,
   },
   {
     type: 'certificate',
@@ -75,7 +110,7 @@ const certificates = [
     issuer: 'Southern Leyte State University, CCSIT',
     date: '2024',
     ext: '.cert',
-    image: '/src/assets/certificate/Programming_v1.jpg',
+    image: certProgrammingV1,
   },
   {
     type: 'certificate',
@@ -83,7 +118,7 @@ const certificates = [
     issuer: 'Southern Leyte State University, FCIS',
     date: '2024',
     ext: '.cert',
-    image: '/src/assets/certificate/Evco_Recognation.jpg',
+    image: certEvcoRecognition,
   },
   {
     type: 'certificate',
@@ -91,7 +126,7 @@ const certificates = [
     issuer: 'CodeChum',
     date: '2024',
     ext: '.cert',
-    image: '/src/assets/certificate/CodeChum.png',
+    image: certCodeChum,
   },
   {
     type: 'certificate',
@@ -99,7 +134,7 @@ const certificates = [
     issuer: 'DICT Region VIII',
     date: '2024',
     ext: '.cert',
-    image: '/src/assets/certificate/Hack4Gov_v2.jpg',
+    image: certHack4GovV2,
   },
   {
     type: 'certificate',
@@ -107,7 +142,7 @@ const certificates = [
     issuer: 'DICT Region VIII',
     date: '2023',
     ext: '.cert',
-    image: '/src/assets/certificate/Hack4Gov_v1.jpg',
+    image: certHack4GovV1,
   },
   {
     type: 'certificate',
@@ -115,7 +150,7 @@ const certificates = [
     issuer: 'DICT Region VIII',
     date: '2022',
     ext: '.cert',
-    image: '/src/assets/certificate/StartUp.jpg',
+    image: certStartUp,
   },
 ]
 
@@ -126,11 +161,7 @@ const projects = [
     title: 'SoilSnap',
     desc: 'An AI-powered soil classification system that identifies soil types from images, helping farmers and researchers analyze soil conditions quickly and accurately.',
     tags: ['MERN Stack', 'YOLOv6', 'Python', 'TensorFlow', 'Tailwind', 'PWA'],
-    images: [
-      '/src/assets/project/SS_v0.png',
-      '/src/assets/project/SS_v1.png',
-      '/src/assets/project/SS_v2.png',
-    ],
+    images: [soilSnap0, soilSnap1, soilSnap2],
   },
   {
     type: 'project',
@@ -138,39 +169,23 @@ const projects = [
     title: 'Municipal Assessor System',
     desc: 'A GIS-enabled property assessment and land records management system with parcel mapping, report generation, and automated tax assessment workflows for local government.',
     tags: ['Laravel', 'Leaflet', 'QGIS', 'MySQL', 'JavaScript', 'Bootstrap'],
-    images: [
-      '/src/assets/project/MS_v0.png',
-      '/src/assets/project/MS_v1.png',
-      'src/assets/project/MS_v2.png'
-    ],
+    images: [assessor0, assessor1, assessor2],
   },
   {
     type: 'project',
     ext: '.web',
     title: 'Resort Management and Reservation',
     desc: 'A business management platform designed to streamline daily operations through centralized data management, workflow automation, reporting and reservation.',
-    tags: ['Laravel', 'Boostrap', 'MySQL', 'PayMongo'],
-    images: [
-      '/src/assets/project/BO_v0.png',
-      '/src/assets/project/BO_v1.png',
-      '/src/assets/project/BO_v2.png',
-      '/src/assets/project/BO_v3.png',
-      '/src/assets/project/BO_v4.png'
-    ],
+    tags: ['Laravel', 'Bootstrap', 'MySQL', 'PayMongo'],
+    images: [resort0, resort1, resort2, resort3, resort4],
   },
   {
     type: 'project',
     ext: '.web',
     title: 'Human Resource Information System (HRIS)',
     desc: 'A web-based HR management system that automates employee records, recruitment, attendance, leave requests, payroll-related processes, and administrative reporting.',
-    tags: ['Laravel', 'Face API', 'MySQL', 'Boostrap'],
-    images: [
-      '/src/assets/project/HR_v0.png',
-      '/src/assets/project/HR_v1.png',
-      '/src/assets/project/HR_v2.png',
-      '/src/assets/project/HR_v3.png',
-      '/src/assets/project/HR_v4.png',
-    ],
+    tags: ['Laravel', 'Face API', 'MySQL', 'Bootstrap'],
+    images: [hris0, hris1, hris2, hris3, hris4],
   },
 ]
 
@@ -243,6 +258,7 @@ function Tag({ children }) {
     </span>
   )
 }
+
 function useActiveSection(ids) {
   const [active, setActive] = useState(ids[0])
 
@@ -423,7 +439,7 @@ function ImageCarousel({ images, alt }) {
         onTouchEnd={onTouchEnd}
       >
         <div
-          className=" flex w-full transition-transform duration-300 ease-out"
+          className="flex w-full transition-transform duration-300 ease-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {images.map((src, i) => (
@@ -551,9 +567,10 @@ const App = () => {
 
           <div className="flex items-center gap-2">
             <ThemeToggle></ThemeToggle>
-            
-            <a  href={Resume}
-            download="Cabarrubias, Ryan.pdf"
+
+            <a
+              href={Resume}
+              download="Cabarrubias, Ryan.pdf"
               className="hidden rounded-lg bg-primary px-4 py-2 font-mono text-[13px] text-primary-foreground hover:opacity-90 sm:inline-block"
             >
               resume
@@ -695,6 +712,7 @@ const App = () => {
             </div>
           </SectionPanel>
         </section>
+
         {/* EXPERIENCE */}
         <section id="experience" ref={experienceRef} className={'border-border py-16 sm:py-24 ' + revealClass(experienceVisible)}>
           <FileTab>experience.log</FileTab>
