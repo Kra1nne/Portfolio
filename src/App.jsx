@@ -36,6 +36,8 @@ import hris2 from '../src/assets/project/HR_v2.png'
 import hris3 from '../src/assets/project/HR_v3.png'
 import hris4 from '../src/assets/project/HR_v4.png'
 
+import { ChevronRight } from 'lucide-react';
+
 const navItems = [
   { label: 'about.md', id: 'about' },
   { label: 'work/', id: 'work' },
@@ -600,9 +602,9 @@ const App = () => {
         )}
       </header>
 
-      <main className="mx-auto max-w-5xl px-6 flex flex-col items-center">
+      <main className="mx-auto flex max-w-5xl flex-col items-stretch px-6">
         {/* HERO */}
-        <section id="hero" className="border-border py-16 sm:py-24 w-full">
+        <section id="hero" className="border-border py-16 sm:py-24">
           <FileTab>hero.js</FileTab>
           <SectionPanel>
             <div className="mb-8 flex flex-col gap-1 font-mono text-[14.5px] text-muted-foreground">
@@ -676,7 +678,10 @@ const App = () => {
         <section id="work" ref={workRef} className={'border-border py-16 sm:py-24 ' + revealClass(workVisible)}>
           <FileTab>work/</FileTab>
           <SectionPanel>
-            <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">02 · Selected work</span>
+            <div className='flex justify-between item-center'>
+              <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">02 · Selected work</span> 
+              <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a>
+            </div>
             <h2 className="mb-6 font-sans text-2xl font-semibold sm:text-3xl">Recent projects</h2>
             <div className="grid gap-5 sm:grid-cols-2">
               {projects.map((p, i) => (
@@ -782,7 +787,10 @@ const App = () => {
         <section id="certificate" ref={certificateRef} className={'border-border py-16 sm:py-24 ' + revealClass(certificateVisible)}>
           <FileTab>certificate/</FileTab>
           <SectionPanel>
-            <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">05 · Credentials</span>
+            <div className='flex justify-between items-center'>
+              <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">05 · Credentials</span>
+               <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a>
+            </div>
             <h2 className="mb-6 font-sans text-2xl font-semibold sm:text-3xl">Certificates &amp; awards</h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {certificates.map((c, i) => (
@@ -792,6 +800,13 @@ const App = () => {
                   onClick={() => setSelectedItem(c)}
                   className="flex flex-col gap-3 rounded-xl border border-border bg-background p-5 text-left transition hover:-translate-y-0.5 hover:shadow-lg"
                 >
+                  <div className="relative h-[150px] overflow-hidden">
+                    <img
+                      src={c.image}
+                      alt={c.title}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                   <div className="flex items-center justify-between">
                     <span className="rounded-md border border-border bg-card px-2 py-0.5 font-mono text-[11px] text-primary">
                       {c.ext}
@@ -808,7 +823,7 @@ const App = () => {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" ref={contactRef} className={'py-16 sm:py-24 ' + revealClass(contactVisible)}>
+        <section id="contact" ref={contactRef} className={'py-16 sm:py-24 w-full' + revealClass(contactVisible)}>
           <FileTab>contact.sh</FileTab>
           <SectionPanel>
             <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">06· Contact</span>
