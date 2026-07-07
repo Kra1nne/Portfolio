@@ -680,7 +680,7 @@ const App = () => {
           <SectionPanel>
             <div className='flex justify-between item-center'>
               <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">02 · Selected work</span> 
-              <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a>
+              {/* <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a> */}
             </div>
             <h2 className="mb-6 font-sans text-2xl font-semibold sm:text-3xl">Recent projects</h2>
             <div className="grid gap-5 sm:grid-cols-2">
@@ -789,7 +789,7 @@ const App = () => {
           <SectionPanel>
             <div className='flex justify-between items-center'>
               <span className="mb-2.5 block font-mono text-xs uppercase tracking-wider text-primary">05 · Credentials</span>
-               <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a>
+               {/* <a href="http://" className='text-sm text-primary flex items-center'>see more <ChevronRight size={14}/></a> */}
             </div>
             <h2 className="mb-6 font-sans text-2xl font-semibold sm:text-3xl">Certificates &amp; awards</h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
