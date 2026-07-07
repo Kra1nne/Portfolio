@@ -37,12 +37,12 @@ import hris3 from '../src/assets/project/HR_v3.png'
 import hris4 from '../src/assets/project/HR_v4.png'
 
 const navItems = [
-  { label: 'about', id: 'about' },
-  { label: 'work', id: 'work' },
-  { label: 'experience', id: 'experience' },
-  { label: 'skills', id: 'skills' },
-  { label: 'certificate', id: 'certificate' },
-  { label: 'contact', id: 'contact' },
+  { label: 'about.md', id: 'about' },
+  { label: 'work/', id: 'work' },
+  { label: 'experience.log', id: 'experience' },
+  { label: 'skills.json', id: 'skills' },
+  { label: 'certificate/', id: 'certificate' },
+  { label: 'contact.sh', id: 'contact' },
 ]
 
 const experience = [
@@ -600,9 +600,9 @@ const App = () => {
         )}
       </header>
 
-      <main className="mx-auto max-w-6xl px-6">
+      <main className="mx-auto max-w-5xl px-6 flex flex-col items-center">
         {/* HERO */}
-        <section id="hero" className="border-border py-16 sm:py-24">
+        <section id="hero" className="border-border py-16 sm:py-24 w-full">
           <FileTab>hero.js</FileTab>
           <SectionPanel>
             <div className="mb-8 flex flex-col gap-1 font-mono text-[14.5px] text-muted-foreground">
