@@ -182,7 +182,7 @@ export const features = withSlugs([
     title: 'Kingfishers Shine at 2nd Eastern Visayas Coding Olympics',
     outlet: 'Western Leyte College of Ormoc City, Inc.',
     date: 'October 18, 2024',
-    role: '2nd Place',
+    role: 'Participant - 2nd Placer',
     desc: 'Student participants from Southern Leyte State University (SLSU) secured notable awards during the 2nd Eastern Visayas Coding Olympics (EVCO 2024), organized by the PSITE Eastern Visayas Chapter',
     url: 'https://www.facebook.com/southernleytestateu/posts/pfbid02Qe6c8DizzSZciTeoPEqPR4vErmhpbxtvszNGHq1RpiQGtHBjTvhddFcikj3GKcN8l?locale=tr_TR',
     image:
