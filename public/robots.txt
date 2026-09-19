@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ryancabarrubias.vercel.app/sitemap.xml
